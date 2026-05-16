@@ -3,7 +3,7 @@
    Handles: Nav, Weather, News, Canvas particles, Clock
 ═══════════════════════════════════════════════════════════ */
 
-const API_BASE = "https://jjk-1.onrender.com/";
+const API_BASE = "https://jjk-1.onrender.com";
  // Relative — served by Express; change to http://localhost:5000 for separate dev
 
 /* ═══════════════════════════════════════════════════════════

@@ -3,7 +3,8 @@
    Handles: Nav, Weather, News, Canvas particles, Clock
 ═══════════════════════════════════════════════════════════ */
 
-const API_BASE = ""; // Relative — served by Express; change to http://localhost:5000 for separate dev
+const API_BASE = "https://jjk.onrender.com";
+ // Relative — served by Express; change to http://localhost:5000 for separate dev
 
 /* ═══════════════════════════════════════════════════════════
    1. LIVE CLOCK

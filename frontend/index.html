@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JJK — Live Intelligence Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Animated particle canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<div class="page-wrapper">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header>
+    <div class="header-top">
+      <a class="logo" href="#">
+        <span class="logo-jjk">JJK</span>
+        <span class="logo-tagline">// Live Intelligence</span>
+      </a>
+      <div class="live-clock">
+        <span class="live-dot"></span>
+        <span id="clock">--:--:--</span>
+      </div>
+    </div>
+
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="weather">⛅ Weather</button>
+      <button class="nav-tab"        data-tab="news">📡 News Feed</button>
+    </nav>
+  </header>
+
+  <!-- ═══════════ MAIN ═══════════ -->
+  <main>
+
+    <!-- ── WEATHER SECTION ─────────────────────────── -->
+    <section id="section-weather" class="section active">
+
+      <div class="section-title">WEATHER INTEL</div>
+
+      <!-- City search -->
+      <div class="search-bar">
+        <input
+          type="text"
+          id="city-input"
+          class="search-input"
+          placeholder="Enter city name…"
+          value="Hyderabad"
+        />
+        <button class="btn btn-primary" id="weather-search-btn">SEARCH</button>
+      </div>
+
+      <!-- Weather display -->
+      <div id="weather-content">
+        <div class="loading-overlay">
+          <div class="cursed-spinner"></div>
+          <div class="loading-text">FETCHING WEATHER DATA…</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── NEWS SECTION ───────────────────────────── -->
+    <section id="section-news" class="section">
+
+      <div class="section-title">NEWS FEED</div>
+
+      <!-- Controls -->
+      <div class="news-controls">
+        <div class="category-pills">
+          <button class="pill active" data-category="technology">Technology</button>
+          <button class="pill" data-category="science">Science</button>
+          <button class="pill" data-category="business">Business</button>
+          <button class="pill" data-category="sports">Sports</button>
+          <button class="pill" data-category="entertainment">Entertainment</button>
+          <button class="pill" data-category="health">Health</button>
+          <button class="pill" data-category="world">World</button>
+        </div>
+
+        <div class="news-search">
+          <input type="text" id="news-query-input" class="search-input" placeholder="Search news…" />
+          <button class="btn btn-primary" id="news-search-btn">GO</button>
+        </div>
+      </div>
+
+      <!-- News grid -->
+      <div id="news-content">
+        <div class="loading-overlay">
+          <div class="cursed-spinner"></div>
+          <div class="loading-text">LOADING NEWS FEED…</div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    <div class="footer-brand">JJK</div>
+    <div class="footer-info">
+      Data sourced from <span>OpenWeatherMap</span> &amp; <span>NewsData.io</span><br/>
+      CodTech Internship · Task 1 · API Integration
+    </div>
+  </footer>
+
+</div><!-- /page-wrapper -->
+
+<script src="script.js"></script>
+</body>
+</html>
